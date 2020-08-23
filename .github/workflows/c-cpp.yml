@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: mfiumara/bluez-ci:tagname
+    runs-on: mfiumara/bluez-ci:latest
 
     steps:
     - uses: actions/checkout@v2
