@@ -9,7 +9,9 @@ on:
 jobs:
   build:
 
-    runs-on: mfiumara/bluez-ci:latest
+    runs-on: ubuntu-latest
+    container:
+      image: mfiumara/bluez-ci:latest
 
     steps:
     - uses: actions/checkout@v2
