@@ -1,0 +1,22 @@
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    # aufs-tools \
+    build-essential \
+    automake \
+    libtool \
+    # The following are bluez dependencies
+    libglib2.0-dev \
+    libdbus-1-dev \
+    udev \
+    libudev-dev \
+    libical-dev \
+    libjson-c-dev \
+    libreadline-dev \
+    systemd \
+    # s3cmd=1.1.* \
+ && rm -rf /var/lib/apt/lists/*
+
+ WORKDIR /workdir
